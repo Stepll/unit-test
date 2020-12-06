@@ -87,7 +87,6 @@ E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\net
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.csprojAssemblyReference.cache
-E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.csproj.CoreCompileInputs.cache
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.AssemblyInfoInputs.cache
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.AssemblyInfo.cs
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.csproj.CopyComplete
@@ -95,5 +94,9 @@ E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\net
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.pdb
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.genruntimeconfig.cache
 E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\IIG.BinaryFlag.dll
-E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\IIG.BinaryFlag.pdb
-E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\IIG.BinaryFlag.xml
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\code\C#\unit-test-black-box\XUnitTestProject1\XUnitTestProject1\obj\Debug\netcoreapp3.1\XUnitTestProject1.csproj.CoreCompileInputs.cache
