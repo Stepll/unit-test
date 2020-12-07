@@ -1,263 +1,358 @@
 using System;
 using System.IO;
 using IIG.BinaryFlag;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace XUnitTestProject1
 {
-    [TestClass]
-    public class L2Test
+    public class UnitTest1
     {
-
-        [TestMethod]
-        public void Constructor_MaxLength_falseReturned()
+        [Fact]
+        public void TestInit1_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(17179868703, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(1, true);
+            Assert.NotNull(Flag);
 
-            bool expected = false;
+        }
+        [Fact]
+        public void TestInit2_T()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.NotNull(Flag);
 
-            bool actual = mbf.GetFlag();
+        }
+        [Fact]
+        public void TestInit3_T()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(3, true);
+            Assert.NotNull(Flag);
 
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Constructor_ulongMaxLength_falseReturned()
+        [Fact]
+        public void TestInit1_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(18446744073709551615, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(1, false);
+            Assert.NotNull(Flag);
 
-            bool expected = false;
+        }
+        [Fact]
+        public void TestInit2_F()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            Assert.NotNull(Flag);
 
-            bool actual = mbf.GetFlag();
+        }
+        [Fact]
+        public void TestInit3_F()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(3, false);
+            Assert.NotNull(Flag);
 
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_falseReturned()
+        [Fact]
+        public void TestInit1_Default()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(1);
+            Assert.NotNull(Flag);
 
-            bool expected = false;
+        }
+        [Fact]
+        public void TestInit2_Default()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
+            Assert.NotNull(Flag);
 
-            bool actual = mbf.GetFlag();
+        }
+        [Fact]
+        public void TestInit3_Default()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(3);
+            Assert.NotNull(Flag);
 
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_trueReturned()
+        [Fact]
+        public void TestInit17179868704_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
+            Assert.NotNull(Flag);
 
-            bool expected = true;
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void SetFlag_1_99_trueReturned()
+        [Fact]
+        public void TestInit17179868705_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(99, false);
-            for (ulong i = 0; i < 99; i++)
-            {
-                mbf.SetFlag(i);
-            }
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.NotNull(Flag);
 
-            bool expected = true;
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void SetFlag_1_999_trueReturned()
+        [Fact]
+        public void TestInit17179868706_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(999, false);
-            for (ulong i = 0; i < 999; i++)
-            {
-                mbf.SetFlag(i);
-            }
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706, true);
+            Assert.NotNull(Flag);
 
-            bool expected = true;
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void ResetFlag_1_9_falseReturned()
+        [Fact]
+        public void TestInit17179868704_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(99, true);
-            for (ulong i = 0; i < 9; i++)
-            {
-                mbf.ResetFlag(i);
-            }
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, false);
+            Assert.NotNull(Flag);
 
-            bool expected = false;
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void ResetFlag_10_99_falseReturned()
+        [Fact]
+        public void TestInit17179868705_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(99, true);
-            for (ulong i = 9; i < 99; i++)
-            {
-                mbf.ResetFlag(i);
-            }
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, false);
+            Assert.NotNull(Flag);
 
-            bool expected = false;
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_01_falseReturned()
+        [Fact]
+        public void TestInit17179868706_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706, false);
+            Assert.NotNull(Flag);
 
-            mbf.SetFlag(1);
-
-            bool expected = false;
-
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_0positionFalse_falseReturned()
+        [Fact]
+        public void TestInit17179868704_Default()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(1000, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704);
+            Assert.NotNull(Flag);
 
-            for (ulong i = 1; i < 1000; i++)
-            {
-                mbf.SetFlag(i);
-            }
-
-            bool expected = false;
-
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_300positionTrue_falseReturned()
+        [Fact]
+        public void TestInit17179868705_Default()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(1000, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705);
+            Assert.NotNull(Flag);
 
-            mbf.SetFlag(300);
-
-            bool expected = false;
-
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void GetFlag_999positionFalse_falseReturned()
+        [Fact]
+        public void TestInit17179868706_Default()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(1000, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706);
+            Assert.NotNull(Flag);
 
-            mbf.ResetFlag(999);
+        }
 
-            bool expected = false;
+        [Fact]
+        public void TestInit40()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(40);
+            Assert.NotNull(Flag);
 
-            bool actual = mbf.GetFlag();
+        }
 
-            Assert.AreEqual(expected, actual);
+        [Fact]
+        public void TestInit5621_T()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(5621, true);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestInit888881_F()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(888881, false);
+            Assert.NotNull(Flag);
+        }
+
+        [Fact]
+        public void TestInit9183113()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(9183113);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestGetFlagTrue()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
+            Assert.Equal(true, Flag.GetFlag());
+
         }
 
 
-        [TestMethod]
-        public void GetFlag_0positionTrue_falseReturned()
+        [Fact]
+        public void TestGetFlagFalse()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf = new IIG.BinaryFlag.MultipleBinaryFlag(1000, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            Assert.Equal(false, Flag.GetFlag());
 
-            mbf.SetFlag(0);
-
-            bool expected = false;
-
-            bool actual = mbf.GetFlag();
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Equals_01_00_falseReturned()
+
+
+        [Fact]
+        public void TestSetFlag()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf1 = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
-            IIG.BinaryFlag.MultipleBinaryFlag mbf2 = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, false);
+            Flag.SetFlag(0);
+            Flag.SetFlag(1);
+            Assert.Equal(true, Flag.GetFlag());
 
-            mbf1.SetFlag(1);
-
-            bool expected = false;
-
-            bool actual = mbf1.Equals(mbf2);
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Equals_falseReturned()
+        [Fact]
+        public void TestSetFlag17179868704()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf1 = new IIG.BinaryFlag.MultipleBinaryFlag(100000, false);
-            IIG.BinaryFlag.MultipleBinaryFlag mbf2 = new IIG.BinaryFlag.MultipleBinaryFlag(100000, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(17179868704);
+            });
 
-            mbf1.SetFlag(14567);
-
-            bool expected = false;
-
-            bool actual = mbf1.Equals(mbf2);
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Equals_00_00_trueReturned()
+        [Fact]
+        public void TestSetFlag17179868705()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf1 = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
-            IIG.BinaryFlag.MultipleBinaryFlag mbf2 = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(17179868705);
+            });
 
-            bool expected = true;
-
-            bool actual = mbf1.Equals(mbf2);
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Equals_trueReturned()
+        [Fact]
+        public void TestSetFlag17179868706()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf1 = new IIG.BinaryFlag.MultipleBinaryFlag(1000000, true);
-            IIG.BinaryFlag.MultipleBinaryFlag mbf2 = new IIG.BinaryFlag.MultipleBinaryFlag(1000000, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(17179868706);
+            });
 
-            bool expected = true;
-
-            bool actual = mbf1.Equals(mbf2);
-
-            Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void Equals_sameRef_trueReturned()
+        [Fact]
+        public void TestSetFlag1()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag mbf1 = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
-            IIG.BinaryFlag.MultipleBinaryFlag mbf2 = mbf1;
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(1);
+            });
 
-            bool expected = true;
+        }
 
-            bool actual = mbf1.Equals(mbf2);
+        [Fact]
+        public void TestSetFlag2()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(2);
+            });
 
-            Assert.AreEqual(expected, actual);
+        }
+
+        [Fact]
+        public void TestSetFlag3()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.SetFlag(3);
+            });
+
+        }
+
+
+        [Fact]
+        public void TestResetFlag()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Flag.ResetFlag(1);
+            Assert.Equal(false, Flag.GetFlag());
+
+
+        }
+
+        [Fact]
+        public void TestResetFlag1()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(1);
+            });
+
+        }
+
+        [Fact]
+        public void TestResetFlag2()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(2);
+            });
+
+        }
+
+        [Fact]
+        public void TestResetFlag3()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(3);
+            });
+
+        }
+
+        [Fact]
+        public void TestResetFlag17179868704()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(17179868704);
+            });
+
+        }
+
+        [Fact]
+        public void TestResetFlag17179868705()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(17179868705);
+            });
+
+        }
+
+        [Fact]
+        public void TestResetFlag17179868706()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(17179868706);
+            });
+
+        }
+
+        [Fact]
+        public void TestDispose()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
+
+            Assert.Null(Flag);
+        }
+
+        [Fact]
+        public void TestIEqualse()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag1 = new IIG.BinaryFlag.MultipleBinaryFlag(40);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag2 = new IIG.BinaryFlag.MultipleBinaryFlag(40);
+            Assert.Equal(true, Flag1.Equals(Flag2));
+
         }
 
     }
+
 }
