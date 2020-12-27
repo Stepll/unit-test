@@ -84,15 +84,15 @@ namespace XUnitTestProject1
         [Fact]
         public void TestInit17179868705_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.NotNull(Flag);
 
         }
 
         [Fact]
-        public void TestInit17179868706_T()
+        public void TestInit17179868703_T()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868703, true);
             Assert.NotNull(Flag);
 
         }
@@ -108,15 +108,15 @@ namespace XUnitTestProject1
         [Fact]
         public void TestInit17179868705_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, false);
             Assert.NotNull(Flag);
 
         }
 
         [Fact]
-        public void TestInit17179868706_F()
+        public void TestInit17179868703_F()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706, false);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868703, false);
             Assert.NotNull(Flag);
 
         }
@@ -138,9 +138,9 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void TestInit17179868706_Default()
+        public void TestInit17179868703_Default()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868706);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868703);
             Assert.NotNull(Flag);
 
         }
@@ -208,7 +208,7 @@ namespace XUnitTestProject1
         [Fact]
         public void TestSetFlag17179868704()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
                 Flag.SetFlag(17179868704);
             });
@@ -218,7 +218,7 @@ namespace XUnitTestProject1
         [Fact]
         public void TestSetFlag17179868705()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
                 Flag.SetFlag(17179868705);
             });
@@ -226,11 +226,11 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void TestSetFlag17179868706()
+        public void TestSetFlag17179868703()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
-                Flag.SetFlag(17179868706);
+                Flag.SetFlag(17179868703);
             });
 
         }
@@ -309,7 +309,7 @@ namespace XUnitTestProject1
         [Fact]
         public void TestResetFlag17179868704()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
                 Flag.ResetFlag(17179868704);
             });
@@ -319,7 +319,7 @@ namespace XUnitTestProject1
         [Fact]
         public void TestResetFlag17179868705()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
                 Flag.ResetFlag(17179868705);
             });
@@ -327,11 +327,11 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void TestResetFlag17179868706()
+        public void TestResetFlag17179868703()
         {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705, true);
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704, true);
             Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
-                Flag.ResetFlag(17179868706);
+                Flag.ResetFlag(17179868703);
             });
 
         }
@@ -342,15 +342,6 @@ namespace XUnitTestProject1
             IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
 
             Assert.Null(Flag);
-        }
-
-        [Fact]
-        public void TestIEqualse()
-        {
-            IIG.BinaryFlag.MultipleBinaryFlag Flag1 = new IIG.BinaryFlag.MultipleBinaryFlag(40);
-            IIG.BinaryFlag.MultipleBinaryFlag Flag2 = new IIG.BinaryFlag.MultipleBinaryFlag(40);
-            Assert.Equal(true, Flag1.Equals(Flag2));
-
         }
 
     }
